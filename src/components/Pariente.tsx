@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Familia from '../assets/Illustration.png'
 import axios from 'axios'
 import { StepComponentProps } from 'react-step-builder';
 
@@ -12,27 +11,47 @@ function Pariente(props: StepComponentProps): JSX.Element {
     ]
 
 
-    const [datos, setDatos] = useState({
-        nombres: '',
-        numDocumento: '',
-        apellidoPaterno: '',
-        apellidoMaterno: '',
-        fecNacimiento: ''
+    const [name, setName] = useState({
+        first: '',
+        last: '',
     })
 
-    const getDatos =  async () => {
-        const res = await axios.post(`https://freestyle.getsandbox.com/dummy/obtenerdatospersona`)
-        console.log(res.data.data.tercero)
-        setDatos(res.data.data.tercero)
+    const [date, setDate] = useState({
+        date: ''
+    })
+
+    const [location, setLocation] = useState({
+        city: '',
+        state: '',
+        postcode: ''
+    })
+
+    const getName =  async () => {
+        const res = await axios.get(`https://randomuser.me/api`)
+        console.log(res.data.results[0])
+        setName(res.data.results[0].name)
+    }
+
+    const getDate =  async () => {
+        const res = await axios.get(`https://randomuser.me/api`)
+        setDate(res.data.results[0].dob)
+    }
+
+    const getLocation =  async () => {
+        const res = await axios.get(`https://randomuser.me/api`)
+        setLocation(res.data.results[0].location)
     }
 
     useEffect(() => {
-        getDatos();
+        getName();
+        getDate();
+        getLocation();
     }, [])
 
     const changeDatos = ({target}:any) => {
-        setDatos(target.value)
+        setName(target.value)
       }
+
 
     const [datas, setDatas] = React.useState(data);
 
@@ -43,7 +62,7 @@ function Pariente(props: StepComponentProps): JSX.Element {
                 </div>
                 <div className="formulario-pariente">
                     <p className="formulario-pariente__titulo">
-                        Hola, <span className="formulario-pariente__color">{datos.nombres}</span>
+                        Hola, <span className="formulario-pariente__color">{name.first}</span>
                     </p>
                     <h5 className="formulario-pariente__subtitulo">
                         Valida que los datos sean correctos
@@ -53,19 +72,19 @@ function Pariente(props: StepComponentProps): JSX.Element {
                             <p>Datos personales del titular</p>
                         </div>
                         <div className="formulario-pariente__form__input">
-                            <input type="text" value={datos.numDocumento} placeholder="Número de documento" />
+                            <input type="text" value={location.postcode} placeholder="Número de documento" />
                         </div>
                         <div className="formulario-pariente__form__input">
-                            <input type="text" value={datos.nombres} placeholder="Nombre"/>
+                            <input type="text" value={name.first} placeholder="Nombre"/>
                         </div>
                         <div className="formulario-pariente__form__input">
-                            <input type="text" value={datos.apellidoPaterno} placeholder="Apellido paterno"/>
+                            <input type="text" value={name.last} placeholder="Apellido paterno"/>
                         </div>
                         <div className="formulario-pariente__form__input">
-                            <input type="text" value={datos.apellidoMaterno} placeholder="Apellido materno"/>
+                            <input type="text" value={name.last} placeholder="Apellido materno"/>
                         </div>
                         <div className="formulario-pariente__form__input">
-                            <input type="text" value={datos.fecNacimiento} placeholder="Fecha de nacimiento"/>
+                            <input type="text" value={date.date} placeholder="Fecha de nacimiento"/>
                         </div>
                         <div className="formulario-pariente__form__checks">
                             <h6 className="formulario-pariente__form__genero">Género</h6>
