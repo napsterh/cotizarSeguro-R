@@ -1,6 +1,4 @@
 import React from 'react';
-import Logo from '../assets/logo-rimac.png'
-import Familia from '../assets/Illustration.png'
 import Costo from '../../src/assets/costo.png'
 import Corazon from '../../src/assets/Vector.png'
 import Corazon2 from '../../src/assets/Vector2.png'
@@ -21,12 +19,6 @@ function Plan(props: StepComponentProps): JSX.Element {
         <div className="plan">
             <div className="grid-plan">
                 <div className="descripcion-plan">
-                    <div className="descripcion-plan__familia">
-                        <img src={Familia} alt=""/>
-                    </div>
-                    <div className="descripcion-plan__logo">
-                        <img src={Logo} alt=""/>
-                    </div>
                 </div>
                 <div className="formulario-plan">
                     <p className="formulario-plan__titulo">
@@ -56,10 +48,6 @@ function Plan(props: StepComponentProps): JSX.Element {
                             <div className="formulario-plan__select__costo">S/500</div>
                             <div className="formulario-plan__select__texto">mensual</div>
                         </div>
-                    </div>
-                    <div className="formulario-plan__resumen">
-                        <div className="formulario-plan__resumen__asegurados">Tiene (3) asegurados</div>
-                        <div className="formulario-plan__resumen__resumen">Resumen del plan </div>
                     </div>
                     <div className="formulario-plan__beneficio">
                         <div className="formulario-plan__beneficio__titulo">Cuentas con esto beneficios</div>

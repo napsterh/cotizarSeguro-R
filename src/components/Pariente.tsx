@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Logo from '../assets/logo-rimac.png'
 import Familia from '../assets/Illustration.png'
 import axios from 'axios'
 import { StepComponentProps } from 'react-step-builder';
@@ -41,12 +40,6 @@ function Pariente(props: StepComponentProps): JSX.Element {
         <div className="pariente">
             <div className="grid-pariente">
                 <div className="descripcion-pariente">
-                    <div className="descripcion-pariente__familia">
-                        <img src={Familia} alt=""/>
-                    </div>
-                    <div className="descripcion-pariente__logo">
-                        <img src={Logo} alt=""/>
-                    </div>
                 </div>
                 <div className="formulario-pariente">
                     <p className="formulario-pariente__titulo">
@@ -94,25 +87,6 @@ function Pariente(props: StepComponentProps): JSX.Element {
                                 <label htmlFor="familia">A mí y a mi familia</label>
                             </div>
                         </div>
-                        <h6 className="formulario-pariente__form__table">Datos de los familiares</h6>
-                        <table className="formulario-pariente__form__tb">
-                            <thead className="formulario-pariente__form__tb__headtb">
-                                <tr>
-                                    <th>Vínculo</th>
-                                    <th>Fecha de Nacimiento</th>
-                                    <th><a href="">Agregar</a></th>
-                                </tr>
-                            </thead>
-                            <tbody className="formulario-pariente__form__tb__bodytb">
-                                {datas.map((data) => (
-                                    <tr className="formulario-pariente__form__bodytr">
-                                        <td className="formulario-pariente__form__bodytd">{data.vinculo}</td>
-                                        <td className="formulario-pariente__form__bodytd">{data.fechaNac}</td>
-                                        <td className="formulario-pariente__form__bodytd"><a href="">Eliminar</a></td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
                         <div className="formulario-pariente__form__btn">
                             <input type="submit" value="Continuar" className=" solid" onClick={props.next}/>
                         </div>

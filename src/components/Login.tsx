@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../assets/logo-rimac.png'
 import Familia from '../assets/Illustration.png'
 import Escudo from '../assets/ic_shield.png'
 import Mobile from '../assets/ic_mobile.png'
@@ -15,12 +14,6 @@ function Login(props: StepComponentProps): JSX.Element {
         <div className="login">
             <div className="grid">
                 <div className="descripcion">
-                    <div className="descripcion__familia">
-                        <img src={Familia} alt=""/>
-                    </div>
-                    <div className="descripcion__logo">
-                        <img src={Logo} alt=""/>
-                    </div>
                     <h1 className="descripcion__titulo">
                         Seguro de <span>salud</span>
                     </h1>
@@ -31,7 +24,7 @@ function Login(props: StepComponentProps): JSX.Element {
                         <li><img src={Clinicas}></img>Más de 300 clínicas en todo el Perú</li>
                     </ul>
                     <h5 className="descripcion__derechos">
-                        @ 2021 RIMAC Seguros y Reaseguros
+                        @ 2021 y Company
                     </h5>
                 </div>
                 <div className="formulario">

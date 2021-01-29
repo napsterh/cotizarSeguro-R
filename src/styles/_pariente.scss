@@ -13,7 +13,7 @@
     position: relative;
     padding: 6rem;
     font-family: $fuenteTitulo;
-    background-color: $rojo_rimac;
+    background-color: $azul;
     height: 320px;
     border-radius: 0px 0px 100px 0px;
     &__familia {
@@ -31,7 +31,7 @@
     }
     &__titulo {
         font-family: $fuenteTitulo;
-        color: $blanco-rimac;
+        color: $blanco;
         margin: 35px 0;
         font-weight: 100;
         font-size: 40px;
@@ -41,7 +41,7 @@
     }
     &__lista {
         padding: 0rem;
-        color: $blanco-rimac;
+        color: $blanco;
     }
     & ul {
         margin-bottom: 4rem;
@@ -56,7 +56,7 @@
         margin-right: 12px;
     }
     &__derechos{
-        color: $blanco-rimac;
+        color: $blanco;
         margin-top: 6rem;
         font-family: $fuenteSubtitulo;
         font-weight: 300;
@@ -82,7 +82,7 @@
         font-weight: 300;
     }
     &__color {
-        color: $rojo_rimac;
+        color: $azul;
     }
 
 }
@@ -139,7 +139,7 @@
         outline: none;
         border-radius: 5px;
         cursor: pointer;
-        background-color: $blanco-rimac;
+        background-color: $blanco;
         color: #C5CBE0;
         text-transform: uppercase;
         font-weight: 600;
@@ -149,9 +149,9 @@
         border: 3px solid #F0F2FA;
     }
     &__btn input:hover {
-        background-color: $rojo_rimac;
+        background-color: $azul;
         border: none;
-        color: $blanco-rimac;
+        color: $blanco;
     }
 }
 
