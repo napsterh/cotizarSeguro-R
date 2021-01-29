@@ -1,0 +1,64 @@
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px 75px;
+}
+
+.login {
+    padding: 0px;
+    margin: 0px;
+}
+
+.descripcion {
+    position: relative;
+    padding: 6rem;
+    font-family: $fuenteTitulo;
+    background-color: $rojo_rimac;
+    height: 320px;
+    border-radius: 0px 0px 100px 0px;
+    &__familia {
+        position: absolute;
+        margin-left: 10rem;
+        margin-left: 28rem;
+        margin-top: -15px;
+    }
+    &__familia img {
+        max-width: 250px;
+    }
+    &__logo {
+        margin-top: -5rem;
+        margin-bottom: 3rem;
+    }
+    &__titulo {
+        font-family: $fuenteTitulo;
+        color: $blanco-rimac;
+        margin: 35px 0;
+        font-weight: 100;
+        font-size: 40px;
+    }
+    &__titulo span{
+        font-weight: 900;
+    }
+    &__lista {
+        padding: 0rem;
+        color: $blanco-rimac;
+    }
+    & ul {
+        margin-bottom: 4rem;
+    }
+    &__lista li {
+        padding: .8rem .8rem .8rem 0rem;
+        list-style: none;
+        font-family: $fuenteSubtitulo;
+        font-weight: 300;
+    }
+    &__lista img {
+        margin-right: 12px;
+    }
+    &__derechos{
+        color: $blanco-rimac;
+        margin-top: 6rem;
+        font-family: $fuenteSubtitulo;
+        font-weight: 300;
+    }
+}
